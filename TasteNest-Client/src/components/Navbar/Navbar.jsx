@@ -16,7 +16,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 font-medium">
+        <ul className="menu menu-horizontal px-1 font-medium text-base">
           <li>
             <details>
               <summary>Home</summary>
@@ -81,9 +81,9 @@ const Navbar = () => {
         <span>
           <FaCartPlus className="text-xl text-green-700" />
         </span>
-        <a className="px-8 py-3 bg-[#FFC222] text-white rounded-md">
+        <button className="px-1 py-2 lg:px-8 lg:py-3 bg-[#FFC222] text-white rounded-[7px] text-sm md:text-lg">
           Contact Us
-        </a>
+        </button>
 
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

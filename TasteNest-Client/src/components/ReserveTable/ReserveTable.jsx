@@ -3,7 +3,7 @@ import React from "react";
 const ReserveTable = () => {
   return (
     <div
-      className="flex items-center md:mx-24 lg:mx-[300px] mx-auto h-72 rounded-3xl px-10 gap-20"
+      className="flex items-center md:mx-24 lg:mx-[300px] mx-auto h-72 rounded-3xl px-10 gap-20  mt-[106px]"
       style={{
         backgroundImage:
           "url('https://i.ibb.co.com/MDJStCZV/031217aa25758ff7087e5f341e284ad34c0d2f29.jpg')",
@@ -19,13 +19,25 @@ const ReserveTable = () => {
       <div className="pt-10">
         <form action="" className="space-y-5">
           <div className="flex items-center gap-4">
-            <input type="text" placeholder="No of Guest" className="input w-6/12" />
+            <input
+              type="text"
+              placeholder="No of Guest"
+              className="input w-6/12"
+            />
             <input type="text" placeholder="Date" className="input w-3/12" />
             <input type="text" placeholder="Time" className="input w-3/12" />
           </div>
           <div className="flex items-center gap-4">
-            <input type="text" placeholder="Full Name" className="input w-[48%]" />
-            <input type="text" placeholder="Phone No" className="input flex-1" />
+            <input
+              type="text"
+              placeholder="Full Name"
+              className="input w-[48%]"
+            />
+            <input
+              type="text"
+              placeholder="Phone No"
+              className="input flex-1"
+            />
           </div>
           <div className="flex justify-end pt-2">
             <div className="border-2 border-[#FFD40D] rounded-xl h-18 w-28 relative">
