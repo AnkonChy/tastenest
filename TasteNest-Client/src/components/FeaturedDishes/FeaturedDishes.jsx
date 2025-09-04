@@ -50,7 +50,7 @@ const FeaturedDishes = () => {
   ];
 
   return (
-    <div className="px-2 md:px-24 lg:px-[300px] mx-auto text-center  mt-32 ">
+    <div className="max-w-7xl mx-auto text-center  mt-32">
       <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-black">
         Featured Dishes
       </h2>

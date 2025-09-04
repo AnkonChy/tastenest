@@ -2,13 +2,13 @@ import React from "react";
 
 const Bbq = () => {
   return (
-    <div className="relative flex flex-col lg:flex-row items-center justify-end gap-6 px-2 md:px-8 lg:px-[340px] mx-auto my-20">
+    <div className="relative flex flex-col lg:flex-row items-center justify-end gap-6 max-w-7xl mx-auto my-20">
       {/* Image */}
-      <div className=" md:absolute md:left-76 md:bottom-0">
+      <div className="">
         <img
           src="https://i.ibb.co.com/s9204LjN/1243034a7d7c0324778dcfac9a4b6221aadd34fe.png"
           alt="Album"
-          className="w-[480px] lg:w-[620px] lg:h-[538px] mx-auto"
+          className="lg:absolute left-6 bottom-4 w-[480px] lg:w-[620px] lg:h-[538px] mx-auto"
         />
       </div>
 

@@ -17,7 +17,7 @@ const menuItems = [
 ];
 const DiscoverMenu = () => {
   return (
-    <div className="text-center mt-[106px]  px-2 md:px-24 lg:px-[300px] mx-auto"> 
+    <div className="text-center mt-[106px]  max-w-7xl mx-auto"> 
       {/* Section Title */}
       <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-black">
         Discover Menu

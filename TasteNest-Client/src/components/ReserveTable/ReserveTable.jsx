@@ -3,7 +3,7 @@ import React from "react";
 const ReserveTable = () => {
   return (
     <div
-      className="flex items-center md:mx-24 lg:mx-[300px] mx-auto h-72 rounded-3xl px-10 gap-20  mt-[106px]"
+      className="flex items-center max-w-7xl mx-auto h-72 rounded-3xl px-10 gap-20  mt-[106px]"
       style={{
         backgroundImage:
           "url('https://i.ibb.co.com/MDJStCZV/031217aa25758ff7087e5f341e284ad34c0d2f29.jpg')",
