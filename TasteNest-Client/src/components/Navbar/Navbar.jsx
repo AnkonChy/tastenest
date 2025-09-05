@@ -5,7 +5,7 @@ import { TbMenu3 } from "react-icons/tb";
 
 const Navbar = () => {
   return (
-    <div className="navbar py-4 bg-base-100 shadow-sm px-2 md:px-24 lg:px-72 mx-auto">
+    <div className="navbar py-4 bg-base-100 max-w-7xl mx-auto">
       <div className="navbar-start">
         <a className="text-xl">
           <img

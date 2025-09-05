@@ -4,7 +4,7 @@ import feedstake from "../../assets/feedback/feedstake.png";
 import feedicecream from "../../assets/feedback/feedicecream.png";
 const Feedbacks = () => {
   return (
-    <div className="px-2 md:px-24 lg:px-[300px] mx-auto py-16 flex flex-col lg:flex-row items-end justify-between gap-14 mt-32">
+    <div className="max-w-7xl mx-auto py-16 flex flex-col lg:flex-row items-end justify-between gap-28 md:gap-14 mt-32">
       {/* Left Content */}
       <div className="flex-1">
         <p className="text-red-500 font-semibold uppercase text-lg tracking-wider mb-2">
@@ -16,7 +16,7 @@ const Feedbacks = () => {
 
         {/* Review Card */}
         <div className="border-3 border-yellow-400 rounded-3xl p-8 relative bg-white shadow-sm">
-          <p className="text-gray-700 mb-4 leading-relaxed w-5/6 text-2xl">
+          <p className="text-gray-700 mb-4 leading-relaxed md:w-5/6 text-2xl">
             A good restaurant is like a vacation; it transports you, and it
             becomes a lot more than just about the food. All great deeds and all
             great thoughts
@@ -38,7 +38,7 @@ const Feedbacks = () => {
       {/* Right Images */}
       <div className="flex-1 relative w-full mx-auto">
         {/* Coffee - top right */}
-        <div className="mb-9">
+        <div className="mb-8">
           <img
             src={feedstake}
             alt="coffee"

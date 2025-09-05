@@ -7,6 +7,7 @@ import ReserveTable from "../../components/ReserveTable/ReserveTable";
 import About from "../../components/About/About";
 import FeaturedDishes from "../../components/FeaturedDishes/FeaturedDishes";
 import Feedbacks from "../../components/Feedbacks/Feedbacks";
+import Experts from "../../components/Experts/Experts";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <ReserveTable/>
       <FeaturedDishes/>
       <Feedbacks/>
+      <Experts/>
     </div>
   );
 };
