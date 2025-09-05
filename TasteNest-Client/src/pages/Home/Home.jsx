@@ -8,6 +8,7 @@ import About from "../../components/About/About";
 import FeaturedDishes from "../../components/FeaturedDishes/FeaturedDishes";
 import Feedbacks from "../../components/Feedbacks/Feedbacks";
 import Experts from "../../components/Experts/Experts";
+import AppStore from "../../components/AppStore/AppStore";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <FeaturedDishes/>
       <Feedbacks/>
       <Experts/>
+      <AppStore/>
     </div>
   );
 };

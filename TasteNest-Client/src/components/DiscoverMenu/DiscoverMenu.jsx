@@ -24,7 +24,7 @@ const DiscoverMenu = () => {
       </h2>
       <div className="w-20 md:w-36 lg:w-68 h-1 bg-yellow-400 mx-auto my-2 rounded mb-10 md:mb-[100px]"></div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[35px] mt-8 w-full mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[35px] mt-8 w-full mx-auto">
         {menuItems.map((item) => (
           <div
             key={item.id}
