@@ -10,14 +10,14 @@ import pizza from "../../assets/appstore/pizza.png";
 const AppStore = () => {
   return (
     <div
-      className="bg-[#f9fafc] pt-44 pb-20 w-full"
+      className="bg-[#f9fafc] pt-20 pb-30 0 w-full mb-32"
       style={{
         backgroundImage: `url(${appstorebg})`,
         backgroundRepeat: "no-repeat", // makes the image cover the whole div
         backgroundPosition: "center",
       }}
     >
-      <div className=" flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
+      <div className=" flex flex-col md:flex-row items-start justify-between max-w-7xl mx-auto">
         {/* Left Section */}
         <div className=" text-center md:text-left">
           <p className="text-red-500 font-semibold uppercase text-lg mb-2">
@@ -30,15 +30,21 @@ const AppStore = () => {
           {/* Features */}
           <ul className="mb-6 space-y-2 text-gray-700">
             <li className="flex items-center gap-2">
-              <span className="w-[19px] h-[19px] bg-yellow-400 rounded-full"></span>
+              <div className="w-[19px] h-[19px] bg-yellow-400 rounded-full flex items-center justify-center">
+                <div className="w-[6px] h-[6px] rounded-full bg-white"></div>
+              </div>
               Higher Reach - Minimal Effort
             </li>
             <li className="flex items-center gap-2">
-              <span className="w-[19px] h-[19px] bg-yellow-400 rounded-full"></span>
+              <div className="w-[19px] h-[19px] bg-yellow-400 rounded-full flex items-center justify-center">
+                <div className="w-[6px] h-[6px] rounded-full bg-white"></div>
+              </div>
               Showcase your Brand
             </li>
             <li className="flex items-center gap-2">
-              <span className="w-[19px] h-[19px] bg-yellow-400 rounded-full"></span>
+              <div className="w-[19px] h-[19px] bg-yellow-400 rounded-full flex items-center justify-center">
+                <div className="w-[6px] h-[6px] rounded-full bg-white"></div>
+              </div>
               Exclusive offers & discounts
             </li>
           </ul>
@@ -62,28 +68,28 @@ const AppStore = () => {
           {/* Phone Mockup */}
           <img
             src={bike} // replace with your asset
-            className="object-contain absolute left-40 -top-10"
+            className="object-contain absolute left-26 top-45"
           />
           <img
             src={mobile} // replace with your asset
-            className="absolute object-contain -top-60 left-[375px]"
+            className="absolute object-contain top-3 left-80"
           />
 
           <img
             src={icecream} // replace with your asset
-            className="object-contain absolute left-[725px] -top-24"
+            className="object-contain absolute left-[680px] top-32"
           />
 
           <img
             src={leaf} // replace with your asset
-            className="object-contain absolute -top-72 left-36"
+            className="object-contain absolute -top-8 left-28"
           />
-          
+
           <img
             src={pizza} // replace with your asset
             alt="Phone App"
-            className="object-contain absolute -right-32 -top-75"
-          /> 
+            className="object-contain absolute -right-32 -top-16"
+          />
         </div>
       </div>
     </div>
