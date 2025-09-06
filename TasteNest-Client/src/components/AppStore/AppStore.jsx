@@ -30,20 +30,20 @@ const AppStore = () => {
           {/* Features */}
           <ul className="mb-6 space-y-2 text-gray-700">
             <li className="flex items-center gap-2">
-              <div className="w-[19px] h-[19px] bg-yellow-400 rounded-full flex items-center justify-center">
-                <div className="w-[6px] h-[6px] rounded-full bg-white"></div>
+              <div className="w-5 h-5 bg-yellow-400 rounded-full relative">
+                <div className="w-[6px] h-[6px] rounded-full bg-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
               </div>
               Higher Reach - Minimal Effort
             </li>
             <li className="flex items-center gap-2">
-              <div className="w-[19px] h-[19px] bg-yellow-400 rounded-full flex items-center justify-center">
-                <div className="w-[6px] h-[6px] rounded-full bg-white"></div>
+              <div className="w-5 h-5 bg-yellow-400 rounded-full relative">
+                <div className="w-[6px] h-[6px] rounded-full bg-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
               </div>
               Showcase your Brand
             </li>
             <li className="flex items-center gap-2">
-              <div className="w-[19px] h-[19px] bg-yellow-400 rounded-full flex items-center justify-center">
-                <div className="w-[6px] h-[6px] rounded-full bg-white"></div>
+              <div className="w-5 h-5 bg-yellow-400 rounded-full relative">
+                <div className="w-[6px] h-[6px] rounded-full bg-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
               </div>
               Exclusive offers & discounts
             </li>
