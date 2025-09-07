@@ -1,60 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { FaLock } from "react-icons/fa";
 import axios from "axios";
-const FeaturedDishes = () => {
-  // const [dishes, setDishes] = useState([]); // ✅ state to hold API data
-  // const [loading, setLoading] = useState(true);
+import SectionHeader from "../../shared/SectionHeader/SectionHeader";
 
-  // useEffect(() => {
-  //   // ✅ fetch data from your server API
-  //   axios
-  //     .get("http://localhost:7000/dish") // replace with your actual API URL
-  //     .then((res) => {
-  //       console.log(res.data);
-  //       setDishes(res.data);
-  //       // setLoading(false);
-  //     })
-  //     .catch((err) => {
-  //       console.error("Failed to fetch dishes:", err);
-  //       // setLoading(false);
-  //     });
-  // }, []);
-  const dishes = [
-    {
-      id: 1,
-      label: "SALE",
-      title: "Crispy Fried Chicken",
-      originalPrice: 14.85,
-      salePrice: 10.85,
-      bgColor: "#F3274C",
-      img: "https://i.ibb.co.com/s9204LjN/1243034a7d7c0324778dcfac9a4b6221aadd34fe.png",
-    },
-    {
-      id: 2,
-      label: "SALE",
-      title: "Crispy Fried Chicken",
-      originalPrice: 14.85,
-      salePrice: 10.85,
-      bgColor: "#F3274C",
-      img: "https://i.ibb.co.com/s9204LjN/1243034a7d7c0324778dcfac9a4b6221aadd34fe.png",
-    },
-    {
-      id: 3,
-      label: "SALE",
-      title: "Crispy Fried Chicken",
-      originalPrice: 14.85,
-      salePrice: 10.85,
-      bgColor: "#F3274C",
-      img: "https://i.ibb.co.com/s9204LjN/1243034a7d7c0324778dcfac9a4b6221aadd34fe.png",
-    },
-  ];
+const FeaturedDishes = () => {
+  const [dishes, setDishes] = useState([]); // ✅ state to hold API data
+
+  useEffect(() => {
+    // ✅ fetch data from your server API
+    axios
+      .get("http://localhost:7000/dish") // replace with your actual API URL
+      .then((res) => {
+        setDishes(res.data);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch dishes:", err);
+      });
+  }, []);
 
   return (
     <div className="max-w-7xl mx-auto text-center  mt-32">
-      <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-black">
-        Featured Dishes
-      </h2>
-      <div className="w-20 md:w-36 lg:w-68 h-1 bg-yellow-400 mx-auto my-2 rounded mb-10 md:mb-[100px]"></div>
+      <SectionHeader title="Featured Dishes" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  lg:gap-10">
         {dishes.map((dish) => (
           <div

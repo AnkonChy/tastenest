@@ -1,30 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import chef1 from "../../assets/experts/expert1.png"; // replace with your images
 import chef2 from "../../assets/experts/expert2.png";
 import chef3 from "../../assets/experts/expert3.png";
 import signature from "../../assets/experts/sign.png";
+import axios from "axios";
 
 const Experts = () => {
-  const chefs = [
-    {
-      id: 1,
-      role: "Dessert specialist",
-      name: "Thomas Walim",
-      image: chef1,
-    },
-    {
-      id: 2,
-      role: "Chef Master",
-      name: "James Jhonson",
-      image: chef2,
-    },
-    {
-      id: 3,
-      role: "Dessert specialist",
-      name: "Room Minal",
-      image: chef3,
-    },
-  ];
+  const [expert, setExpert] = useState([]);
+  useEffect(() => {
+    // ✅ fetch data from your server API
+    axios
+      .get("http://localhost:7000/expert") // replace with your actual API URL
+      .then((res) => {
+        setExpert(res.data);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch dishes:", err);
+      });
+  }, []);
+
 
   return (
     <div className="max-w-7xl mx-auto mt-20 mb-72">
@@ -33,7 +27,7 @@ const Experts = () => {
       </h2>
       <div className="w-20 md:w-36 lg:w-68 h-1 bg-yellow-400 mx-auto my-2 rounded mb-10 md:mb-6"></div>
       <div className="flex flex-col md:flex-row justify-center items-center gap-44 md:gap-20 px-5">
-        {chefs.map(({ id, role, name, image }) => (
+        {expert.map(({ id, role, name, image }) => (
           <div
             key={id}
             className="flex flex-col items-center text-center relative"

@@ -3,20 +3,20 @@ import React from "react";
 const ReserveTable = () => {
   return (
     <div
-      className="flex items-center max-w-7xl mx-auto h-72 rounded-3xl px-10 gap-20  mt-[106px]"
+      className="flex items-center justify-between max-w-7xl mx-auto h-72 rounded-3xl px-10 gap-20  mt-[106px]"
       style={{
         backgroundImage:
           "url('https://i.ibb.co.com/MDJStCZV/031217aa25758ff7087e5f341e284ad34c0d2f29.jpg')",
       }}
     >
-      <div className="w-1/3 p">
+      <div className="w-2/5 p">
         <h2 className="text-2xl md:text-5xl font-bold text-white">
           RESERVE <br /> A TABLE
         </h2>
+        <div className="w-3/5 h-1 bg-yellow-400 my-2 rounded flex"></div>
         <p className="text-sm text-gray-200">Discover our New Menu!</p>
-        <div className="w-2/4 h-1 bg-yellow-400 my-2 rounded flex"></div>
       </div>
-      <div className="pt-10">
+      <div className="pt-10 w-full">
         <form action="" className="space-y-5">
           <div className="flex items-center gap-4">
             <input

@@ -11,7 +11,7 @@ const categories = [
 
 const FoodCategories = () => {
   return (
-    <section className="grid grid-cols-2 lg:grid-cols-4 justify-items-center gap-6 p-6 my-10 max-w-7xl mx-auto">
+    <section className="grid grid-cols-2 lg:grid-cols-4 justify-items-center pt-16 my-10 max-w-3xl mx-auto">
       {categories.map((cat) => (
         <div
           key={cat.id}
@@ -37,3 +37,4 @@ const FoodCategories = () => {
 };
 
 export default FoodCategories;
+ 

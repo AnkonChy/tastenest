@@ -27,8 +27,8 @@ const About = () => {
     //     <div></div>
     //   </div>
     // </div>
-    <section className="max-w-7xl mx-auto px-4 md:px-8 mt-10 lg:mt-32">
-      <div className="">
+    <section className="max-w-7xl mx-auto mt-10 lg:mt-32">
+      <div>
         {/* Upper Content */}
         <div className="flex flex-col md:flex-row items-start">
           {/* Upper left */}

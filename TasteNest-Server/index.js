@@ -11,7 +11,6 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.ri84s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
-
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -20,11 +19,23 @@ const client = new MongoClient(uri, {
   },
 });
 async function run() {
-  const dishCollection = client.db("tastenest").collection("dishes");
+  const dishCollection = client.db("taste-nest").collection("dishes");
+  const expertCollection = client.db("taste-nest").collection("experts");
+  const newsCollection = client.db("taste-nest").collection("news");
 
   //all dishes
   app.get("/dish", async (req, res) => {
     const result = await dishCollection.find().toArray();
+    res.send(result);
+  });
+  //all experts
+  app.get("/expert", async (req, res) => {
+    const result = await expertCollection.find().toArray();
+    res.send(result);
+  });
+  //all news
+  app.get("/news", async (req, res) => {
+    const result = await newsCollection.find().toArray();
     res.send(result);
   });
 }
