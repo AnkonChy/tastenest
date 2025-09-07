@@ -1,0 +1,4 @@
+.mySwiper .swiper-pagination {
+  position: relative !important; /* by default absolute thake */
+  margin-top: 20px;              /* dot er niche gap */
+}

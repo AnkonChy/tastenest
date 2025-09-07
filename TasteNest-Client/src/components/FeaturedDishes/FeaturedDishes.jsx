@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import "./styles.css";
 
 const FeaturedDishes = () => {
   const [dishes, setDishes] = useState([]);
@@ -28,16 +29,16 @@ const FeaturedDishes = () => {
       <SectionHeader title="Featured Dishes" />
 
       <Swiper
-        slidesPerView={3} // small screen
+        // slidesPerView={1} // small screen
         spaceBetween={20}
-        slidesPerGroup={3}
+        // slidesPerGroup={1}
         pagination={{ clickable: true }}
         modules={[Pagination]}
         className="mySwiper"
         breakpoints={{
-          640: { slidesPerView: 1, spaceBetween: 20 },
-          768: { slidesPerView: 2, spaceBetween: 30 },
-          1024: { slidesPerView: 3, spaceBetween: 40 },
+          640: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 20 },
+          768: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 30 },
+          1024: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 40 },
         }}
       >
         {dishes.map((dish) => (

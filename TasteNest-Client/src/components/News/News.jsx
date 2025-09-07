@@ -21,15 +21,19 @@ const News = () => {
       });
   }, []);
   return (
-    <div className="max-w-7xl mx-auto text-center  mt-32">
+    <div className=" md:max-w-7xl mx-auto text-center  mt-32">
       <SectionHeader title="Recent News" />
-      <div className="flex items-center justify-between">
+      <div className="flex  items-center flex-col md:flex-row  md:justify-between gap-10">
         {news.map((signleNews) => (
-          <div className="flex items-center text-start gap-10">
+          <div className="flex items-center flex-col md:flex-row text-start gap-10">
             <div>
-              <img src={signleNews?.image} alt="" className="w-[260px] rounded-3xl" />
+              <img
+                src={signleNews?.image}
+                alt=""
+                className="w-full md:w-[260px] rounded-3xl"
+              />
             </div>
-            <div className="">
+            <div className="w-full md:w-auto">
               <span className="bg-yellow-300 font-bold px-3 py-1 rounded-md">
                 {signleNews?.date}
               </span>

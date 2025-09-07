@@ -4,6 +4,7 @@ import chef2 from "../../assets/experts/expert2.png";
 import chef3 from "../../assets/experts/expert3.png";
 import signature from "../../assets/experts/sign.png";
 import axios from "axios";
+import SectionHeader from "../../shared/SectionHeader/SectionHeader";
 
 const Experts = () => {
   const [expert, setExpert] = useState([]);
@@ -19,13 +20,9 @@ const Experts = () => {
       });
   }, []);
 
-
   return (
     <div className="max-w-7xl mx-auto mt-20 mb-72">
-      <h2 className="text-2xl md:text-4xl lg:text-6xl text-center font-bold text-black">
-        Meet Our Experts
-      </h2>
-      <div className="w-20 md:w-36 lg:w-68 h-1 bg-yellow-400 mx-auto my-2 rounded mb-10 md:mb-6"></div>
+      <SectionHeader title=" Meet Our Experts" />
       <div className="flex flex-col md:flex-row justify-center items-center gap-44 md:gap-20 px-5">
         {expert.map(({ id, role, name, image }) => (
           <div
