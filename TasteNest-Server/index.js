@@ -22,6 +22,7 @@ async function run() {
   const dishCollection = client.db("taste-nest").collection("dishes");
   const expertCollection = client.db("taste-nest").collection("experts");
   const newsCollection = client.db("taste-nest").collection("news");
+  const reserveCollection = client.db("taste-nest").collection("reserve");
 
   //all dishes
   app.get("/dish", async (req, res) => {
@@ -38,6 +39,13 @@ async function run() {
     const result = await newsCollection.find().toArray();
     res.send(result);
   });
+
+  //add reserve
+  app.post('/reserve',async(req,res)=>{
+    const data = req.body;
+    const result = await reserveCollection.insertOne(data)
+    res.send(result)
+  })
 }
 run().catch(console.dir);
 app.get("/", (req, res) => {

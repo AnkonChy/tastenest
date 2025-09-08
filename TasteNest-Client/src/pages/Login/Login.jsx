@@ -36,7 +36,7 @@ const Login = () => {
           />
         </div>
 
-        <div className="card bg-[#2B2738] w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="card bg-[#2B2738] w-full max-w-sm py-10">
           <h1 className="text-4xl text-[#FFFEFF] ml-7 mt-2">
             Login Your Account
           </h1>
@@ -50,7 +50,7 @@ const Login = () => {
                 type="email"
                 name="email"
                 placeholder="email"
-                className="input input-bordered"
+                className="input input-bordered w-full"
                 required
               />
             </div>
@@ -63,34 +63,34 @@ const Login = () => {
                 type="password"
                 name="password"
                 placeholder="password"
-                className="input input-bordered"
+                className="input input-bordered w-full mb-2"
                 required
               />
-              <label className="mt-3 text-base text-white hover:text-gray-400">
+              <label className="text-base text-white hover:text-gray-400">
                 <Link to="/forgetPass" className="link">
                   Forgot password?
                 </Link>
               </label>
             </div>
 
-            <div className="form-control mt-6">
-              <button className="btn bg-[#6E54B5] border-none text-white hover:bg-purple-950">
+            <div className="form-control mt-4 flex justify-center">
+              <button className="btn bg-[#6E54B5] w-full border-none text-white hover:bg-purple-950">
                 Login
               </button>
             </div>
           </form>
 
-          <p className="text-white ml-9 pb-4">
+          <p className="text-white ml-6">
             Don't have an account? <NavLink to="/register">Register</NavLink>
           </p>
 
-          <div className="divider divider-warning mt-0 text-[#D0CFD1]">
+          <div className="divider divider-warning py-4 text-[#D0CFD1]">
             OR register with
           </div>
 
           <button
             onClick={handleGoogleSignIn}
-            className="text-lg btn w-3/4 mx-auto bg-[#2B2738] text-[#D0CFD1] hover:text-black"
+            className="text-lg btn w-5/6 mx-auto bg-[#2B2738] text-[#D0CFD1] hover:text-black"
           >
             <FcGoogle className="" />
             Google
