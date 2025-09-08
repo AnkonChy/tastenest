@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router";
 import { FaCartPlus } from "react-icons/fa";
 import { TbMenu3 } from "react-icons/tb";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, signOutUser } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    signOutUser()
+      .then(() => {
+        console.log("user sign out successfully");
+      })
+      .catch((error) => console.log("error", error.message));
+  };
+
   return (
     <div className="navbar py-4 bg-base-100 max-w-7xl mx-auto px-0">
       <div className="navbar-start">
@@ -16,9 +27,9 @@ const Navbar = () => {
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 font-medium text-base">
+        <ul className="menu menu-horizontal px-1 font-medium text-lg">
           <li>
-            <details>
+            {/* <details>
               <summary>Home</summary>
               <ul className="p-2">
                 <li>
@@ -28,7 +39,8 @@ const Navbar = () => {
                   <a>Submenu 2</a>
                 </li>
               </ul>
-            </details>
+            </details> */}
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link>About Us</Link>
@@ -77,13 +89,32 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end gap-4">
+      <div className="navbar-end p-0">
         <span>
-          <FaCartPlus className="text-xl text-green-700" />
+          <FaCartPlus className="text-xl mr-4 text-green-700" />
         </span>
-        <button className="px-1 py-2 lg:px-8 lg:py-3 bg-[#FFC222] text-white rounded-[7px] text-sm md:text-lg">
+        <button className="px-1 py-2 lg:px-6 lg:py-[10px] bg-[#FFC222] text-white rounded-[7px] text-sm md:text-xl">
           Contact Us
         </button>
+        {user ? (
+          <>
+            <button
+              onClick={handleSignOut}
+              className="ml-2 px-1 py-2 lg:px-6 lg:py-[10px] bg-[#F3274C] text-white rounded-[7px] text-sm md:text-xl"
+            >
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <Link
+              to="/login"
+              className="ml-2 px-1 py-2 lg:px-6 lg:py-[10px] bg-[#F3274C] text-white rounded-[7px] text-sm md:text-xl"
+            >
+              Login
+            </Link>
+          </>
+        )}
 
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

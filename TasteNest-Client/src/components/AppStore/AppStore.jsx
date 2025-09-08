@@ -52,11 +52,11 @@ const AppStore = () => {
           {/* Buttons */}
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-            <button className="flex items-center gap-2 bg-red-500 text-white px-5 py-3 rounded-lg font-medium shadow-md hover:bg-red-600 transition">
+            <button onClick={() => window.open("https://play.google.com/store/games?hl=en&pli=1", "_blank")} className="flex items-center gap-2 bg-red-500 text-white px-5 py-3 rounded-lg font-medium shadow-md hover:bg-red-600 transition">
               <FaGooglePlay className="text-lg" />
               Google Play
             </button>
-            <button className="flex items-center gap-2 bg-black text-white px-5 py-3 rounded-lg font-medium shadow-md hover:bg-gray-900 transition">
+            <button onClick={() => window.open("https://www.apple.com/app-store/", "_blank")} className="flex items-center gap-2 bg-black text-white px-5 py-3 rounded-lg font-medium shadow-md hover:bg-gray-900 transition">
               <FaApple className="text-lg" />
               App Store
             </button>

@@ -11,22 +11,24 @@ import Experts from "../../components/Experts/Experts";
 import AppStore from "../../components/AppStore/AppStore";
 import News from "../../components/News/News";
 import Community from "../../components/Community/Community";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
     <div>
       <Banner />
-      <About/>
+      <About />
       <FoodItem></FoodItem>
       <Bbq />
-      <DiscoverMenu/>
-      <ReserveTable/>
-      <FeaturedDishes/>
-      <Feedbacks/>
-      <Experts/>
-      <AppStore/>
-      <News/>
-      <Community/>
+      <DiscoverMenu />
+      <ReserveTable />
+      <FeaturedDishes />
+      <Feedbacks />
+      <Experts />
+      <AppStore />
+      <News />
+      <Community />
+      <Footer />
     </div>
   );
 };
