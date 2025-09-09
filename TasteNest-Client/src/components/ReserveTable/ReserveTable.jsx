@@ -44,7 +44,7 @@ const ReserveTable = () => {
           "url('https://i.ibb.co.com/MDJStCZV/031217aa25758ff7087e5f341e284ad34c0d2f29.jpg')",
       }}
     >
-      <div className="w-full md:w-2/5">
+      <div className="w-full md:w-2/5 mt-10 md:mt-0 mb-0 md:mb-10">
         <h2 className="text-2xl md:text-5xl font-bold text-white">
           RESERVE <br /> A TABLE
         </h2>

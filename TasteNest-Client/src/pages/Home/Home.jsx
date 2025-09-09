@@ -17,17 +17,19 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <About />
-      <FoodItem></FoodItem>
-      <Bbq />
-      <DiscoverMenu />
-      <ReserveTable />
-      <FeaturedDishes />
-      <Feedbacks />
-      <Experts />
-      <AppStore />
-      <News />
-      <Community />
+      <div className="px-2">
+        <About />
+        <FoodItem></FoodItem>
+        <Bbq />
+        <DiscoverMenu />
+        <ReserveTable />
+        <FeaturedDishes />
+        <Feedbacks />
+        <Experts />
+        <AppStore />
+        <News />
+        <Community />
+      </div>
       <Footer />
     </div>
   );

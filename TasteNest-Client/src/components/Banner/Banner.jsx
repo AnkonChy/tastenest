@@ -46,7 +46,7 @@ const Banner = () => {
         {/* Right Content */}
         <div className="w-full md:w-5/6 relative">
           {/* Overlay Card */}
-          <div className="absolute w-60 md:w-80 top-[-200px] right-18 md:top-10 md:right-0 bg-black/70 p-4 rounded-3xl border border-yellow-500 flex items-center justify-center gap-8">
+          <div className="absolute w-60 md:w-80 top-[30px] right-18 md:top-10 md:right-0 bg-black/70 p-4 rounded-3xl border border-yellow-500 flex items-center justify-center gap-8">
             <div>
               <span className="bg-pink-800 text-white text-sm font-semibold absolute bottom-25 md:bottom-33 md:left-44 py-2 px-3 rounded">
                 Weekly Special
