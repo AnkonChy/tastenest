@@ -11,7 +11,7 @@ const Experts = () => {
   useEffect(() => {
     // ✅ fetch data from your server API
     axios
-      .get("http://localhost:7000/expert") // replace with your actual API URL
+      .get("https://tastenest-hkoj.onrender.com/expert") // replace with your actual API URL
       .then((res) => {
         setExpert(res.data);
       })

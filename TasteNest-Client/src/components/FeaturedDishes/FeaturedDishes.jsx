@@ -15,7 +15,7 @@ const FeaturedDishes = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:7000/dish")
+      .get("https://tastenest-hkoj.onrender.com/dish")
       .then((res) => {
         setDishes(res.data);
       })

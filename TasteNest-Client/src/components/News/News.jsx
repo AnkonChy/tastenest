@@ -11,7 +11,7 @@ const News = () => {
   useEffect(() => {
     // ✅ fetch data from your server API
     axios
-      .get("http://localhost:7000/news") // replace with your actual API URL
+      .get("https://tastenest-hkoj.onrender.com/news") // replace with your actual API URL
       .then((res) => {
         console.log(res.data);
         setNews(res.data);

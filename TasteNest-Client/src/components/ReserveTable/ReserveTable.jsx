@@ -22,7 +22,7 @@ const ReserveTable = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:7000/reserve",
+        "https://tastenest-hkoj.onrender.com/reserve",
         reserveData
       );
 
