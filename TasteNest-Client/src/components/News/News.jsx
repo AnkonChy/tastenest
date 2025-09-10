@@ -25,7 +25,7 @@ const News = () => {
       <SectionHeader title="Recent News" />
       <div className="flex  items-center flex-col md:flex-row  md:justify-between gap-10">
         {news.map((signleNews) => (
-          <div className="flex items-center flex-col md:flex-row text-start gap-10">
+          <div key={news._id} className="flex items-center flex-col md:flex-row text-start gap-10">
             <div>
               <img
                 src={signleNews?.image}

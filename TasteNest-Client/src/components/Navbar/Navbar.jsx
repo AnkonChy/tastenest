@@ -1,18 +1,33 @@
-import React, { useContext } from "react";
-import { Link } from "react-router";
+// import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router";
 import { FaCartPlus } from "react-icons/fa";
 import { TbMenu3 } from "react-icons/tb";
-import { AuthContext } from "../../provider/AuthProvider";
+// import { AuthContext } from "../../provider/AuthProvider";
+import { useDispatch, useSelector } from "react-redux";
+import { signOut } from "firebase/auth";
+import auth from "../../firebase/firebase.config";
+import { clearUser } from "../../redux/authSlice";
 
 const Navbar = () => {
-  const { user, signOutUser } = useContext(AuthContext);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const user = useSelector((state) => state.auth.user);
+  console.log(user);
+  // const { user, signOutUser } = useContext(AuthContext);
 
-  const handleSignOut = () => {
-    signOutUser()
-      .then(() => {
-        console.log("user sign out successfully");
-      })
-      .catch((error) => console.log("error", error.message));
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth); // Firebase logout
+      dispatch(clearUser()); // Redux store clear
+      navigate("/login"); // Login page e pathao
+    } catch (error) {
+      console.error("Logout failed:", error.message);
+    }
+    // signOutUser()
+    //   .then(() => {
+    //     console.log("user sign out successfully");
+    //   })
+    //   .catch((error) => console.log("error", error.message));
   };
 
   return (

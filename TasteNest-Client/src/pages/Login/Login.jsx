@@ -4,18 +4,35 @@ import pic2 from "../../assets/login/pexels-minan1398-1482803.jpg";
 import pic3 from "../../assets/login/44116.jpg";
 import pic4 from "../../assets/login/6091826.jpg";
 import { Link, NavLink, useNavigate } from "react-router";
-import { useContext } from "react";
-import { AuthContext } from "../../provider/AuthProvider";
+// import { useContext } from "react";
+// import { AuthContext } from "../../provider/AuthProvider";
+import { useDispatch } from "react-redux";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import auth from "../../firebase/firebase.config";
+import { setUser } from "../../redux/authSlice";
 
+const provider = new GoogleAuthProvider();
 const Login = () => {
-  const { signInWithGoogle } = useContext(AuthContext);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleGoogleSignIn = () => {
-    signInWithGoogle().then((result) => {
+  const handleGoogleSignIn = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      dispatch(setUser(result.user)); // redux এ user save
       navigate("/");
-    });
+    } catch (error) {
+      console.error("Google login failed:", error.message);
+    }
   };
+  // const { signInWithGoogle } = useContext(AuthContext);
+  // const navigate = useNavigate();
+
+  // const handleGoogleSignIn = () => {
+  //   signInWithGoogle().then((result) => {
+  //     navigate("/");
+  //   });
+  // };
   return (
     <div
       className="min-h-[calc(100vh-86px)] relative flex justify-center items-center"
